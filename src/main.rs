@@ -4,7 +4,10 @@
 //! Uses LCS algorithm to remove sequence strings from the given
 //! text file.
 //!
+//!
+extern crate kmpsearch;
 
-pub mod lcs;
+mod lcs;
+mod replace;
 
 fn main() {}
