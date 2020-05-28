@@ -7,3 +7,6 @@ edition = "2018"
 
 [dependencies]
 kmpsearch = "1.0.0"
+walkdir = "2.3.1"
+docopt = "1.1.0"
+serde = "1.0.110"

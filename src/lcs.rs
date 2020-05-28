@@ -24,8 +24,8 @@ pub fn lcs(seq_1: String, seq_2: String) -> String {
 
     // now run the substring algorithm
 
-    for i in 1..seq_length_one + 1 {
-        for j in 1..seq_length_two + 1 {
+    for i in 1..seq_length_one {
+        for j in 1..seq_length_two {
             if seq_vector_one[i - 1] == seq_vector_two[j - 1] {
                 dynamic_table[i][j] = dynamic_table[i - 1][j - 1] + 1;
                 if dynamic_table[i][j] > max_length {
@@ -52,5 +52,13 @@ mod tests {
         let s2 = String::from("Hello my boy");
         let value = lcs(s1, s2);
         assert_eq!(value, "Hello ");
+    }
+
+    #[test]
+    fn test_check_common_case_two() {
+        let s1 = String::from("Hellboy");
+        let s2 = String::from("Hello my boy");
+        let value = lcs(s1, s2);
+        assert_eq!(value, "Hell");
     }
 }
