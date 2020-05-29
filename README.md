@@ -9,4 +9,8 @@ Uses KMP search to pattern match and slice texts.
 Usage: crunch <source> <out>
 ```
 
+## Develop
 
+```
+cargo build --release
+```
